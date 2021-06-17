@@ -23,7 +23,7 @@
  *               =========
  *               대문자 변환 : toUpperCase() ==> String
  *               소문자 변환 : toLowerCase() ==> String 
- *               ***지정된 문자를 변경 : replace(),replaceAll()
+ *               ***지정된 문자를 변경 : replace(),replaceAll():정규식
  *            4. 문자열 추출 
  *               =========
  *                charAt()
@@ -74,7 +74,7 @@ public class 자바문자열데이터 {
 		if(ID.equalsIgnoreCase(myid) && PWD.equalsIgnoreCase(mypwd))
 		{
 			// 로그인 
-			System.out.println(myid+"님 로그인되었습니다!!");
+			System.out.println(myid+"님 로그인되었습니다!!");//void java.io.PrintStream.println(String x)
 		}
 		else
 		{
