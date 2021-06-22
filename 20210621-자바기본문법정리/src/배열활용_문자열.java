@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 import org.jsoup.Jsoup;
@@ -32,6 +33,7 @@ public class 배열활용_문자열 {
         {
         	Document doc=Jsoup.connect("https://www.genie.co.kr/chart/top200?ditc=D&ymd=20210621&hh=15&rtm=Y&pg="+i).get();
             Elements titles=doc.select("a.title");
+            System.out.println(titles);
             Elements singers=doc.select("a.artist");
             Elements albums=doc.select("a.albumtitle");
             for(int j=0;j<50;j++)

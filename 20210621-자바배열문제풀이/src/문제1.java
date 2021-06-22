@@ -6,10 +6,9 @@
  *      = 100~999 => 루프 => 100
  */
 public class 문제1 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-        int sum=0;
+    static void display()
+    {
+    	int sum=0;
         int count=0;
         for(int i=100;i<=999;i++)
         {
@@ -21,6 +20,10 @@ public class 문제1 {
         }
         System.out.println("합:"+sum);
         System.out.println("갯수:"+count);
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        display();
 	}
 
 }

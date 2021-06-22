@@ -17,6 +17,8 @@ public class 문제2 {
         }
         System.out.println("합:"+sum);
         System.out.println("갯수:"+count);
+        
+        문제1.display();
 	}
 
 }
