@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 public class 자바메소드_달력만들기 {
     // 사용자 입력 => 메소드
+	int year,month,week;
 	static int input(String s)
 	{
 		Scanner scan=new Scanner(System.in);
