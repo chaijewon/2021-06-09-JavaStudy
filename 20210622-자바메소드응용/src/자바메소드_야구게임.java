@@ -101,6 +101,7 @@ public class 자바메소드_야구게임 {
     	}
     	// 힌트
     	System.out.printf("Input Number:%d-%d-%d,Result:%dS-%dB\n",user[0],user[1],user[2],s,b);
+    	
     	return s;
     }
     // 종료 
