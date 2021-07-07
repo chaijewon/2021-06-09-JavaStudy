@@ -13,7 +13,7 @@ package com.sist.lang;
  *             = A a=new A();
  *               A b=a.clone();  ==> a메모리, b메모리가 따라 생성 => 메모리 공간 2개
  */
-class Box
+class Box implements Cloneable
 {
 	private int width=100;
 	private int height=200;
@@ -30,6 +30,13 @@ class Box
 	public void setHeight(int height) {
 		this.height = height;
 	}
+	// 특별한 경우가 아니면 오버라이드하지 않는다 (외부라이브러리 , 소프트웨어 패턴:prototype패턴) 
+	// 소프트웨어패턴 (스프링: 8개패턴)
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
 	
 	
 }
@@ -43,9 +50,17 @@ public class MainClass1 {
         System.out.println("a.width="+a.getWidth()+",a.height="+a.getHeight());
         Box b=new Box();// b=>width=100,height=200
         System.out.println("b.width="+b.getWidth()+",b.height="+b.getHeight());
-        
+        try
+        {
+          Box c=(Box)b.clone();
+          System.out.println("c.width="+c.getWidth()+",c.height="+c.getHeight());
+        }catch(Exception ex) {}
         
         
 	}
 
 }
+
+
+
+
